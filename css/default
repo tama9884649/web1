@@ -1,0 +1,88 @@
+@charset "utf-8";
+*{
+margin: 0;
+padding: 0;
+}
+body{
+  background-color: gray;
+}
+header{
+  padding: 10px;
+  text-align: center;
+  background-color: red;
+}
+section{
+  padding: 10px;
+  background-color: orange;
+}
+aside{
+padding: 10px;
+  background-color: green;
+}
+footer{
+  padding: 10px;
+  background-color: blue;
+  text-align: center;
+}
+@media screen and (max-width:640px){
+body{
+background-color: red;
+}
+}
+@media screen and (min-width:641px) and (max-width:980px){
+body{
+background-color: green;
+}
+}
+@media screen and (min-width:981px){
+body{
+background-color: blue;
+}
+}
+@media screen and (orientation:portrait){
+  body:after {
+    content: "縦長";
+  }
+}
+@media screen and (orientation:landscape){
+  body:after {
+    content: "横長";
+  }
+}
+body{
+  background-color: gray;
+ font-family: "Sawarabi Mincho";
+}
+@media screen and (min-width:641px){
+  aside{
+    width: calc(50% - 20%);
+    float:left;
+  }
+  #side:after{
+    content:"";
+    display:block;
+    clear:both;
+  }
+}
+@media screen and (min-width:1025px){
+  #main{
+    max-width: 1024px;
+    margin: auto;
+  }
+  section{
+    width: calc(70% - 20px);
+    float:left;
+  }
+  #side{
+    width: calc(1024px - 718px);
+    float:left;
+  }
+  aside{
+    width: calc(100% -20%);
+  }
+  #main:after{
+    content:"";
+    display:block;
+    clear:both;
+  }
+}
